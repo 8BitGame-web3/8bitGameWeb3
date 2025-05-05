@@ -1,6 +1,6 @@
 # 8Bit Game Web3
 
-![8Bit Game Logo](Logo.jpg)
+![8Bit Game Logo](Logo.png)
 
 [Official Website](https://www.8bitgame.buzz/) | [Twitter](https://x.com/8BitGame8Bit)
 

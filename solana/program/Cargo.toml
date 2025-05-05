@@ -1,0 +1,16 @@
+[package]
+name = "8bit-game-rewards"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+no-entrypoint = []
+
+[dependencies]
+solana-program = "1.16"
+borsh = "0.10.3"
+thiserror = "1.0"
+spl-token = { version = "4.0", features = ["no-entrypoint"] }
+
+[lib]
+crate-type = ["cdylib", "lib"] 

@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - NEXT_PUBLIC_SOLANA_RPC_URL=https://api.devnet.solana.com
+      - NEXT_PUBLIC_GAME_TOKEN_MINT=your_token_mint_address
+    volumes:
+      - ./public/games:/app/public/games
+    restart: unless-stopped
+
+  solana-test-validator:
+    image: solanalabs/solana-test-validator:latest
+    ports:
+      - "8899:8899"
+      - "8900:8900"
+    volumes:
+      - solana-test-validator-data:/root/.local/share/solana/install/releases
+    command: --reset --quiet
+
+volumes:
+  solana-test-validator-data: 

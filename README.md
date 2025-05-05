@@ -52,7 +52,7 @@
 
 ### Installation
 ```bash
-git clone https://github.com/yourusername/8bit-game-web3.git
+git clone https://github.com/8BitGame-web3/8bitGameWeb3.git
 cd 8bit-game-web3
 npm install
 ```
